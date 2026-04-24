@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Oréal Beauty Assistant</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!------- Header / Branding ------->
+      <header class="site-header">
+        <img src="img/loreal-logo.svg" alt="L'Oréal Logo" class="logo" />
+        <h1 class="site-title">Beauty Assistant</h1>
+      </header>
+
+      <!------- Product Selection ------->
+      <section class="product-selection">
+        <h2>Choose a Product Category</h2>
+        <div class="product-buttons">
+          <button class="product-btn" data-product="Maybelline Lash Sensational Mascara">Mascara</button>
+          <button class="product-btn" data-product="Lancôme Teint Idole Foundation">Foundation</button>
+          <button class="product-btn" data-product="Garnier Pure Active Cleanser">Skincare</button>
+          <button class="product-btn" data-product="L'Oréal Paris Elvive Shampoo">Haircare</button>
+          <button class="product-btn" data-product="Lancôme La Vie Est Belle Perfume">Fragrance</button>
+          <button class="product-btn" data-product="Maybelline Fit Me Concealer">Concealer</button>
+          <button class="product-btn" data-product="L'Oréal Paris Revitalift Moisturizer">Moisturizer</button>
+          <button class="product-btn" data-product="Lancôme Génifique Serum">Serum</button>
+          <button class="product-btn" data-product="Maybelline Instant Age Rewind">Foundation Primer</button>
+          <button class="product-btn" data-product="Garnier Fructis Conditioner">Conditioner</button>
+          <button class="product-btn" data-product="Yves Saint Laurent Touche Éclat">Highlighter</button>
+          <button class="product-btn" data-product="Biotherm Blue Therapy">Body Care</button>
+        </div>
+      </section>
+
+      <!------- Chat Area ------->
+      <main class="chatbox">
+        <div id="chatWindow" class="chat-window">
+          <!-- messages will be appended here via JS -->
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label for="userInput" class="visually-hidden">Message</label>
+          <input
+            id="userInput"
+            name="userInput"
+            type="text"
+            placeholder="Ask me about L'Oréal products or beauty tips…"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="sendBtn">
+            <span class="material-icons">send</span>
+            <span class="visually-hidden">Send</span>
+          </button>
+        </form>
+      </main>
+
+      <!------- Footer Links ------->
+      <footer class="site-footer">
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <nav>
+          <!-- These URLs are placeholders -->
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact</a>
+        </nav>
+      </footer>
+    </div>
+
+    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
+    <script src="secrets.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
